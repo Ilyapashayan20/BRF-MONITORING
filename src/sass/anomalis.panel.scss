@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+body{
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #F9FAFB;
+}
+$font-family: 'Roboto', sans-serif;
+@mixin panel-link {
+    text-decoration: none;
+    color: #003087;
+    font-size: 12px;
+      
+  }
+  @mixin filters-monitoring {
+    display: flex;
+    width: 165px;
+    flex-wrap: wrap;
+    justify-content: center;
+      
+  }
+  @mixin ViagemStop {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #76BB79;
+    top: -14px;
+    left: -2px;
+      
+  }
+
+.wrapper{
+    overflow: hidden;
+   
+    .header{
+        background: linear-gradient(270deg, #2D348D 0%, #84328A 100%);
+        box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 3px 6px rgba(96, 97, 112, 0.08);
+        position: fixed;
+        width: 100%;
+        z-index: 200;
+        display: flex;
+        .header-1{
+            padding: 20px 0px;
+            padding-left:20px ;
+            display: flex;
+            align-items: center;
+            img{
+                margin-right:30px;
+
+                cursor: pointer;
+            }
+        }
+        .header-2{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            padding-right:20px;
+            padding-left: 67px;
+            .search-block{
+
+              .input-box{
+                  background-color: white;
+                  background: #F6F7F9;
+                  border: 1px solid #D1D1D1;
+                  box-sizing: border-box;
+                  border-radius: 4px;
+                  display: flex;
+                  width: 388px;
+                  padding: 10px 0px;
+                  align-items: center;
+
+                  position: relative;
+                  img{
+                      width: 20px;
+
+                      margin-right: 24px;
+                      margin-left: 15px;
+
+                  }
+                  .arrow{
+                      position: absolute;
+                      right: 0;
+                      align-items: center;
+                      cursor: pointer;
+                  }
+                input{
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    font-size: 17px;
+                    font-weight: 500px;
+                    color: gray;
+                    align-items: center;
+
+                }
+              }
+            }
+            .profil-bloks{
+                .profil{
+                    display: flex;
+                    align-items: center;
+                    >img{
+                        margin-right: 25px;
+                        cursor: pointer;
+                    }
+                     h1{
+                         font-size: 16px;
+                         color: #41348C;
+                         background: white;
+                         border-radius: 100%;
+                         padding: 6px 6px;
+                         font-family: $font-family;
+                          cursor: pointer;
+
+                     }
+                     >p{
+                         color: white;
+                         margin-left: 13px;
+                         font-size: 13px;
+                         cursor: pointer;
+
+                     }
+                     .arrow-2{
+                        margin-left: 15px;
+                     }
+
+
+                }
+            }
+
+        }
+
+
+    }
+
+    .active{
+        position: absolute;
+        left: -100%;
+        transition: 0.5s ease-in-out;
+    }
+  
+
+    .menu{
+        position: fixed;
+        top: 80px;
+        display: none;
+        transition: 0.9s;
+        background-color: white;
+        height: 100%;
+        overflow-y:auto ;
+        
+
+        .menu-items{
+            display: flex;
+            flex-direction: column;
+            .menu-link{
+                display: flex;
+
+                align-items: center;
+                font-size: 17px;
+                line-height: 150%;
+                font-weight: 400;
+                padding: 21px  0;
+                padding-left: 24px;
+                padding-right: 32px;
+                /* identical to box height, or 21px */
+
+
+                /* Gray / 700 */
+
+                color: #5B5C60;
+                text-decoration: none;
+                @media (max-height:820px) {
+                        padding:15px 0;
+                        padding-left: 24px;
+                        padding-right: 32px;
+                }
+
+                &:hover{
+                    background: #F5F8FF;
+                    color: #003087;
+                    border-left: 3px solid #003087 ;
+                }
+                img{
+                    margin-right: 17px;
+                }
+                .ss{
+                    position: absolute;
+                    right: 0;
+                }
+
+            }
+            .monitoring{
+                background: #F5F8FF;
+                    color: #003087;
+                    border-left: 3px solid #003087 ;
+
+            }
+        }
+    }
+    .menu-open{
+        display: block;
+    }
+    .viagem-link{
+        padding:96px 8px 0px 20px;
+       
+    .media-1{
+       
+      
+        .panel{
+           
+            display: flex;
+            align-items: center;
+            .panel-link{
+                text-decoration: none;
+                color: #003087;
+                font-size: 15px;
+                font-weight: 600;
+    
+            }
+            
+            .monitoring{
+                color: #5B5C60;
+            }
+            p{
+                margin: 0 15px;
+            }
+        }
+        .panel-block-1{
+            
+           
+            h1{
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 120%;
+                margin-top: 30px ;
+                /* identical to box height, or 36px */
+                
+                
+                /* Gray / 700 */
+                
+                color: #5B5C60;
+            }
+            .navigation-tab-block{
+                display: flex;
+                border-bottom: 2px solid  #EEF0F3;
+                padding-bottom: 1px;
+                align-items: center;
+                justify-content: center;
+                
+                width: 376px;
+                
+                a{  
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 150%;
+                    margin: 0 6px;
+                    text-align: center;
+                    color: #8E8F95;
+                    text-decoration: none;
+                    transition: 0.01s;
+                    &:hover{
+                        color: #005afe;
+                        border-bottom: 2px solid #005afe;
+                       
+                    }
+
+                }
+                .active-navigation-link{
+
+                    color: #005AFE;
+                    border-bottom: 2px solid #005afe;
+                }
+            
+            }
+    
+        }
+        .activetwo{
+           
+            left: 279px;
+        }
+      
+     
+    }
+      .viagem-card-block-body{
+          display: flex;
+          flex-direction: column;
+          padding-right: 50px;
+          margin-top: 30px;
+          .viagem-card-block:last-child{
+              margin-bottom: 300px;
+          }
+          .viagem-card-block{
+              margin-top: 11px;
+              position: relative;
+              width: 100%;
+              padding: 25px;
+              background-color: #FFFFFF;
+              box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.1);
+              border-radius: 8px;
+              .block-1{
+                  display: flex;
+                  width: 100%;
+                  justify-content: space-between;
+                  align-items: center;
+                  div{
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                    h1{
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 120%;
+                        width: 207px;
+                        /* identical to box height, or 24px */
+                        
+                        
+                        /* Gray / 700 */
+                        
+                        color: #5B5C60;
+                      }
+                      .btn-1{
+                          
+                          display: flex;
+                          align-items: center;
+                          margin-left: 21px;
+                          max-height: 26px;
+                          cursor: pointer;
+                          padding: 0px 15px;
+                          background: #FFF5F5;
+                          border: 1px solid #D22630;
+                          box-sizing: border-box;
+                          border-radius: 40px;
+                          img{
+                              width: 11px;
+                          }
+                          p{
+                            color: #D22630;
+                            font-size: 12px;
+                            margin-left: 7px;
+                          }
+                      }
+                      .btn-2{
+                        background: #F6F7F9;
+                        border: 1px solid #5B5C60;
+                          p{
+                              color: #5B5C60;
+                              margin-left: 0;
+                          }
+                      }
+                      .btn-3{
+                        background: #F5F8FF;
+                        width: 128px;
+                        border: 1px solid #003087;
+                        box-sizing: border-box;
+                        border-radius: 40px;
+                        text-align: center;
+                        p{
+                            color: #003087;
+                            text-align: center;
+                        }
+
+                      }
+
+                  }
+                 .div-2{
+                    display: flex;
+                    align-items: center;
+                     a{
+                         text-decoration: none;
+                         color: #005AFE;
+                         font-weight: bold;
+                         font-size: 15px;
+                        
+                     }
+                     p{
+                         margin: 0 21px;
+                         color: #5B5C60;
+                     }
+                    .viagem-card-open{
+                        width: 30px;
+                        transform: rotate(180deg);
+                        transition: 0.5s;
+                    } 
+                    .viagem-card-open-2{
+                      transform: rotate(0deg);
+  
+                    }
+                    .viagem-card-open-3{
+                      transform: rotate(0deg);
+  
+                    }
+                    .viagem-card-open-4{
+                      transform: rotate(0deg);
+  
+                    }
+                    .viagem-card-open-5{
+                        transform: rotate(0deg);
+    
+                      }
+                    .arrow-animation{
+                      transform: rotate(0deg);
+  
+                    }
+                    .arrow-animation-2{
+                        transform: rotate(180deg);
+                        transition: 0.5s;
+                    }
+                    
+
+                 }
+             
+              }
+              .display{
+                  
+
+              
+              .block-2{
+                  display: flex;
+                  span{
+                    color:#5B5C60 ;
+                    font-weight: bold;
+                }
+                p{
+                    color: #8E8F95;
+                    font-size: 17px;
+                }
+              }
+              .block-3{
+                 display: flex;
+                  margin-bottom: 10px;
+                      span{
+                          color:#5B5C60 ;
+                          font-weight: bold;
+                      }
+                      p{
+                          color: #8E8F95;
+                          font-size: 17px;
+                      }
+                  
+              }
+              .line{
+                  width: 100%;
+                  border-bottom: 1px solid #EEF0F3;
+                  margin: 20px 0;
+              }
+              .block-4{
+                  display: flex;
+                  p{
+                    margin-left: 16px;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #5B5C60;
+                }
+                 
+
+              }
+              .block-5{
+                display: grid;
+                grid-template-columns: auto auto auto ;
+              div{
+                  span{
+                      color:#5B5C60 ;
+                      font-weight: bold;
+                  }
+                  p{
+                      color: #8E8F95;
+                      font-size: 17px;
+                  }
+                  .active-text{
+                      color: #005AFE;
+                  }
+              }
+
+              }
+              .block-6{
+                  a{
+                      text-decoration: none;
+                      color: #005AFE;
+                      font-weight: bold;
+                      font-size: 15px;
+                  }
+              }
+              .block-7{
+                color: #5B5C60;
+                font-size: 20px;
+              }
+              .inputs-form{
+                  p{
+                      color: #5B5C60;
+                      margin-bottom: -4px;
+                  }
+                  .input-1{
+                      padding: 14px 16px;
+                      width: 257px;
+                      display: flex;
+                      justify-content: space-between;
+                    background: #FFFFFF;
+                    border: 1px solid #D1D1D1;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    img{
+                        cursor: pointer;
+                    }
+                    
+                      input{
+                          border: none;
+                          outline: none;
+                      }
+                  }
+                  .input-2{
+                      width: 100%;
+                     height: 160px;
+                      background: #FFFFFF;
+                      border: 1px solid #D1D1D1;
+                      box-sizing: border-box;
+                      border-radius: 4px;
+                      resize: vertical;
+                      overflow: auto;
+                      input{
+                          width: 100%;
+                          height: 100%;
+                      }
+                  }
+                  button{
+                      margin-top: 20px;
+                      border: none;
+                      background: #003087;
+                      border-radius: 16px;
+                      color: white;
+                      cursor: pointer;
+                      text-align: center;
+                      padding: 5.5px 20px;
+                  }
+                  
+              }
+              .block-8{
+                  margin-top: 30px;
+                  position: relative;
+               
+                  img{
+                      position: absolute;
+                      left: -5px;
+                      top: 10px;
+                      
+
+                  }
+                  div{
+                      margin-left: 17px;
+                    span{
+                        color:#5B5C60 ;
+                        font-weight: bold;
+                        font-size:23px ;
+                    }
+                    p{
+                        color: #8E8F95;
+                        font-size: 17px;
+                    }
+                  }
+              }
+            }
+            .display-active{
+                display: none;
+            }
+            .dsp{
+                display: none;
+              
+            }
+            .display-active-2{
+                display: block;
+            }
+          }
+         
+         
+    }
+}
+.padding{
+    padding-left: 270px;
+    padding-right: 20px;
+}
+
+    
+        
+    
+}
+
+
+
+
+.wrapper .add-block.activeone{
+        
+    left: 0;
+    width: 100%;
+    
+  }
+
+
+
+      
+     
+    
+
+
+
+
+
+
+
+
+

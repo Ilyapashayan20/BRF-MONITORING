@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+body {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #F9FAFB;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.wrapper .header {
+  background: -webkit-gradient(linear, right top, left top, from(#2D348D), to(#84328A));
+  background: linear-gradient(270deg, #2D348D 0%, #84328A 100%);
+  -webkit-box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 3px 6px rgba(96, 97, 112, 0.08);
+          box-shadow: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 3px 6px rgba(96, 97, 112, 0.08);
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .header .header-1 {
+  padding: 20px 0px;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .header .header-1 img {
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.wrapper .header .header-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 67px;
+}
+
+.wrapper .header .header-2 .search-block .input-box {
+  background-color: white;
+  background: #F6F7F9;
+  border: 1px solid #D1D1D1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 388px;
+  padding: 10px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.wrapper .header .header-2 .search-block .input-box img {
+  width: 20px;
+  margin-right: 24px;
+  margin-left: 15px;
+}
+
+.wrapper .header .header-2 .search-block .input-box .arrow {
+  position: absolute;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.wrapper .header .header-2 .search-block .input-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 500px;
+  color: gray;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .header .header-2 .profil-bloks .profil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .header .header-2 .profil-bloks .profil > img {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.wrapper .header .header-2 .profil-bloks .profil h1 {
+  font-size: 16px;
+  color: #41348C;
+  background: white;
+  border-radius: 100%;
+  padding: 6px 6px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.wrapper .header .header-2 .profil-bloks .profil > p {
+  color: white;
+  margin-left: 13px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.wrapper .header .header-2 .profil-bloks .profil .arrow-2 {
+  margin-left: 15px;
+}
+
+.wrapper .active {
+  position: absolute;
+  left: -100%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.wrapper .menu {
+  position: fixed;
+  top: 80px;
+  display: none;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+  background-color: white;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.wrapper .menu .menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .menu .menu-items .menu-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  line-height: 150%;
+  font-weight: 400;
+  padding: 21px  0;
+  padding-left: 24px;
+  padding-right: 32px;
+  /* identical to box height, or 21px */
+  /* Gray / 700 */
+  color: #5B5C60;
+  text-decoration: none;
+}
+
+@media (max-height: 820px) {
+  .wrapper .menu .menu-items .menu-link {
+    padding: 15px 0;
+    padding-left: 24px;
+    padding-right: 32px;
+  }
+}
+
+.wrapper .menu .menu-items .menu-link:hover {
+  background: #F5F8FF;
+  color: #003087;
+  border-left: 3px solid #003087;
+}
+
+.wrapper .menu .menu-items .menu-link img {
+  margin-right: 17px;
+}
+
+.wrapper .menu .menu-items .menu-link .ss {
+  position: absolute;
+  right: 0;
+}
+
+.wrapper .menu .menu-items .monitoring {
+  background: #F5F8FF;
+  color: #003087;
+  border-left: 3px solid #003087;
+}
+
+.wrapper .menu-open {
+  display: block;
+}
+
+.wrapper .viagem-link {
+  padding: 96px 8px 0px 20px;
+}
+
+.wrapper .viagem-link .media-1 .panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .viagem-link .media-1 .panel .panel-link {
+  text-decoration: none;
+  color: #003087;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.wrapper .viagem-link .media-1 .panel .monitoring {
+  color: #5B5C60;
+}
+
+.wrapper .viagem-link .media-1 .panel p {
+  margin: 0 15px;
+}
+
+.wrapper .viagem-link .media-1 .panel-block-1 h1 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 120%;
+  margin-top: 30px;
+  /* identical to box height, or 36px */
+  /* Gray / 700 */
+  color: #5B5C60;
+}
+
+.wrapper .viagem-link .media-1 .panel-block-1 .navigation-tab-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid  #EEF0F3;
+  padding-bottom: 1px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 376px;
+}
+
+.wrapper .viagem-link .media-1 .panel-block-1 .navigation-tab-block a {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 150%;
+  margin: 0 6px;
+  text-align: center;
+  color: #8E8F95;
+  text-decoration: none;
+  -webkit-transition: 0.01s;
+  transition: 0.01s;
+}
+
+.wrapper .viagem-link .media-1 .panel-block-1 .navigation-tab-block a:hover {
+  color: #005afe;
+  border-bottom: 2px solid #005afe;
+}
+
+.wrapper .viagem-link .media-1 .panel-block-1 .navigation-tab-block .active-navigation-link {
+  color: #005AFE;
+  border-bottom: 2px solid #005afe;
+}
+
+.wrapper .viagem-link .media-1 .activetwo {
+  left: 279px;
+}
+
+.wrapper .viagem-link .viagem-card-block-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 50px;
+  margin-top: 30px;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block:last-child {
+  margin-bottom: 300px;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block {
+  margin-top: 11px;
+  position: relative;
+  width: 100%;
+  padding: 25px;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.1);
+          box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.1);
+  border-radius: 8px;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .block-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .block-1 h1 {
+  color: #5B5C60;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .block-1 .viagem-card-open {
+  width: 30px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .block-1 .viagem-card-open-2 {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .block-1 .viagem-card-open-3 {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .block-1 .viagem-card-open-4 {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .block-1 .arrow-animation {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .block-1 .arrow-animation-2 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-2 p {
+  margin-left: 16px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #5B5C60;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-3 div span {
+  color: #5B5C60;
+  font-weight: bold;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-3 div p {
+  color: #8E8F95;
+  font-size: 17px;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .line {
+  width: 100%;
+  border-bottom: 1px solid #EEF0F3;
+  margin: 20px 0;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-4 p {
+  margin-left: 16px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #5B5C60;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-5 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-5 div span {
+  color: #5B5C60;
+  font-weight: bold;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-5 div p {
+  color: #8E8F95;
+  font-size: 17px;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display .block-5 div .active-text {
+  color: #005AFE;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display-active {
+  display: none;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .dsp {
+  display: none;
+}
+
+.wrapper .viagem-link .viagem-card-block-body .viagem-card-block .display-active-2 {
+  display: block;
+}
+
+.wrapper .padding {
+  padding-left: 270px;
+  padding-right: 20px;
+}
+
+.wrapper .add-block.activeone {
+  left: 0;
+  width: 100%;
+}
+/*# sourceMappingURL=card.css.map */
