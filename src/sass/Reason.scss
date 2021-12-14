@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+body{
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #E5E5E5;
+    @media (max-width:750px) {
+        background-color: #F9FAFB;
+        
+    }
+}
+
+
+.partial-motivation-header{
+        padding: 16px;
+        .partial-motivation{
+            display: flex;
+            h4{
+                margin-left: 16px;
+                color: #5B5C60;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 120%;
+                span{
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 150%;
+                }
+            }
+        }
+        .motivation-search{
+                margin-top: 18px;
+                background: #FFFFFF;
+                border: 1px solid #D1D1D1;
+                box-sizing: border-box;
+                border-radius: 4px;
+                padding: 14px;
+                padding-left: 20px;
+            input{
+                outline: none;
+                border: none;
+                margin-left: 20px;
+            }
+        }
+        .motivation-items{
+            .motivation-item{
+                display: flex;
+                justify-content: space-between;
+                p{
+                    color: #5B5C60;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 150%;
+                    span{
+                        color: #5B5C60;
+                        font-size: 14px;
+                        font-weight: bold;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+        .underline{
+            left: 0%;
+            right: 0%;  
+            border: 1px solid #EEF0F3;
+            margin: 2px;
+        }
+    }
